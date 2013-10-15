@@ -1,0 +1,8 @@
+name=Apache Tomcat Monitor
+version=2.0
+platforms=windows linux solaris
+description=Provides basic monitoring of Tomcat server performance.
+requiresAgentScript=false
+restartCore=false
+onUpgradeRemoveFiles=true
+onUpgradeRemoveMonitors=false
