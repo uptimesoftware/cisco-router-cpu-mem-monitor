@@ -7,13 +7,13 @@ See http://uptimesoftware.github.io for more information.
 
 ### Category
 
-{ page.category }}
+plugin
 
 ### Version Compatibility
 
 
   
-    * Cisco Router CPU & Memory Monitor 1.1 - 6.0, 5.5, 5.4, 5.3, 5.2
+* Cisco Router CPU & Memory Monitor 1.1 - 6.0, 5.5, 5.4, 5.3, 5.2
   
 
 
@@ -56,5 +56,8 @@ None; no agent required
 
 
 ### Languages Used
-* Shell/Batch* Java
+
+* Shell/Batch
+
+* Java
 
