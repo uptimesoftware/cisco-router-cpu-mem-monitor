@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+        xmlns="http://www.uptimesoftware.com/erdc/erdc"
+        xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+    <class>Cisco Router CPU and Memory Monitor</class>
+    <exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
+    <elements>
+        <element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options> size:40 </control_options>
+            <default_value>scripts/ciscorouter/ciscorouter.bat</default_value>
+            <short_description>Script Name</short_description>
+            <long_description>Name of the script/binary/process to be executed by up.time </long_description>
+            <validation_rule>
+                <alphanumeric/>
+            </validation_rule>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>              
+		<element name="community" parameter_type="input" data_type="string" gui_basic="1"
+				 range_type="0" units="">
+			<control_options>size:10</control_options>
+			<default_value></default_value>
+			<short_description>Community String</short_description>
+			<long_description>Enter the read community string for the Cisco Router</long_description>
+			<validation_rule>
+				<alphanumeric/>
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<string/>
+			</gui_type>
+		</element>
+		<element name="processormemused" parameter_type="output" data_type="integer" gui_basic="1"
+				 range_type="1" units="bytes">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Memory in use (Processor)</short_description>
+			<long_description>Total number of bytes used.</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="processormemfree" parameter_type="output" data_type="integer" gui_basic="1"
+				 range_type="1" units="bytes">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Memory free (Processor)</short_description>
+			<long_description>Total number of bytes free.</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="processormemfreecontig" parameter_type="output" data_type="integer" gui_basic="1"
+				 range_type="1" units="bytes">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Contiguous free memory(Processor)</short_description>
+			<long_description>Largest contiguous block of free memory.</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="iofastmemused" parameter_type="output" data_type="integer" gui_basic="1"
+				 range_type="1" units="bytes">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Memory in use (I/O - Fast)</short_description>
+			<long_description>Total number of bytes used.</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="iofastmemfree" parameter_type="output" data_type="integer" gui_basic="1"
+				 range_type="1" units="bytes">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Memory free (I/O - Fast)</short_description>
+			<long_description>Total number of bytes free.</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="memfreecontigiofast" parameter_type="output" data_type="integer" gui_basic="1"
+				 range_type="1" units="bytes">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Contiguous free memory(I/O - Fast)</short_description>
+			<long_description>Largest contiguous block of free memory</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="cpu5sec" parameter_type="output" data_type="ranged" gui_basic="1"
+				 range_type="1" units="%">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>CPU Utilization (last 5 seconds)</short_description>
+			<long_description>CPU Utilization</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="cpu1min" parameter_type="output" data_type="ranged" gui_basic="1"
+				 range_type="1" units="%">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>CPU Utilization (last 1 minute)</short_description>
+			<long_description>CPU Utilization</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="cpu5min" parameter_type="output" data_type="ranged" gui_basic="1"
+				 range_type="1" units="%">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>CPU Utilization (last 5 minutes)</short_description>
+			<long_description>CPU Utilization</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="timer" parameter_type="output" data_type="integer" gui_basic="0"
+				 range_type="1" units="ms">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Response time</short_description>
+			<long_description>Response time in ms</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+    </elements>
+    <help/>
+</uptime>
