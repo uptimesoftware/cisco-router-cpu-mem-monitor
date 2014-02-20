@@ -1,5 +1,5 @@
 name=Cisco Router CPU & Mem
-version=1.0
+version=1.2
 platforms=windows linux
 description=This plug-in monitors various CPU & Memory metrics of Cisco Routers
 requiresAgentScript=false
