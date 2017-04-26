@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
-        xmlns="http://www.uptimesoftware.com/erdc/erdc"
-        xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" target_grouping="other">
     <class>Cisco Router CPU and Memory Monitor</class>
     <exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
+	<erdc_version>1.0</erdc_version>
+    <category>Network Device Monitors</category>
+    <category_related/>
+    <grid_info>
+        <supported_versions>6.0,7.1,7.2,7.3,7.4,7.5,7.6,7.7,7.8</supported_versions>
+        <supported_platforms>windows, linux</supported_platforms>
+        <upgrade_in_place>true</upgrade_in_place>
+        <requires_agent_scripts>false</requires_agent_scripts>
+    </grid_info>
     <elements>
         <element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
             <control_options> size:40 </control_options>
-            <default_value>scripts/ciscorouter/ciscorouter.sh</default_value>
+            <default_value>scripts/ciscorouter/ciscorouter.bat</default_value>
             <short_description>Script Name</short_description>
             <long_description>Name of the script/binary/process to be executed by up.time </long_description>
             <validation_rule>
